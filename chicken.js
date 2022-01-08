@@ -1,14 +1,14 @@
-class Steve {
+class Chicken {
     constructor(game) {
         this.game = game;
 
         // walking
         this.animations = [];
-        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 25, 103, 23, 17, 4, 0.3, 8);
-        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 25, 121, 23, 18, 4, 0.3, 8);
+        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./chicken_spritesheet.png"), 0, 0, 10, 11, 2, 0.3, 5);
+        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./chicken_spritesheet.png"), 0, 11, 10, 11, 2, 0.3, 5);
         
         // 0 is right, 1 is left
-        this.walking = 0;
+        this.walking = 1;
 
         document.body.addEventListener("mousemove", function () {
             ASSET_MANAGER.getAsset("./footsteps.mp3").muted = false;
@@ -16,9 +16,9 @@ class Steve {
             ASSET_MANAGER.getAsset("./footsteps.mp3").play();
         });
 
-        this.x = -175;
-        this.y = 820;
-        this.speed = 200;
+        this.x = 700;
+        this.y = 902;
+        this.speed = 230;
     };
 
     update() {
