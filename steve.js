@@ -10,8 +10,10 @@ class Steve {
         // 0 is right, 1 is left
         this.walking = 0;
 
-        ASSET_MANAGER.getAsset("./footsteps.mp3").volume = 0.2;
-        ASSET_MANAGER.getAsset("./footsteps.mp3").play();
+        document.body.addEventListener("mousemove", function () {
+            ASSET_MANAGER.getAsset("./footsteps.mp3").volume = 0.2;
+            ASSET_MANAGER.getAsset("./footsteps.mp3").play();
+        });
 
         this.x = -175;
         this.y = 820;

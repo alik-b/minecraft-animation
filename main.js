@@ -14,7 +14,10 @@ ASSET_MANAGER.downloadAll(() => {
 
 	gameEngine.addEntity(new Steve(gameEngine));
 
-	ASSET_MANAGER.getAsset("./minecraft.mp3").play();
+	document.body.addEventListener("mousemove", function () {
+		ASSET_MANAGER.getAsset("./minecraft.mp3").play()
+	});
+	//ASSET_MANAGER.getAsset("./minecraft.mp3").play();
 
 	gameEngine.init(ctx);
 
