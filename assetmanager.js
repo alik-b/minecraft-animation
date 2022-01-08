@@ -46,6 +46,7 @@ class AssetManager {
                     let aud = new Audio();
                     aud.addEventListener("loadeddata", () => {
                         console.log("Loaded " + this.src);
+                        aud.muted = true;
                         this.errorCount++;
                         if (this.isDone()) callback();
                     });

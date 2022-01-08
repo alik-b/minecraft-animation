@@ -11,6 +11,7 @@ class Steve {
         this.walking = 0;
 
         document.body.addEventListener("mousemove", function () {
+            ASSET_MANAGER.getAsset("./footsteps.mp3").muted = false;
             ASSET_MANAGER.getAsset("./footsteps.mp3").volume = 0.2;
             ASSET_MANAGER.getAsset("./footsteps.mp3").play();
         });
