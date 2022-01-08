@@ -9,12 +9,7 @@ class Chicken {
         
         // 0 is right, 1 is left
         this.walking = 1;
-
-        document.body.addEventListener("mousemove", function () {
-            ASSET_MANAGER.getAsset("./footsteps.mp3").muted = false;
-            ASSET_MANAGER.getAsset("./footsteps.mp3").volume = 0.2;
-            ASSET_MANAGER.getAsset("./footsteps.mp3").play();
-        });
+        this.cluckCounter = 0;
 
         this.x = 700;
         this.y = 902;
@@ -22,6 +17,15 @@ class Chicken {
     };
 
     update() {
+        if (this.cluckCounter == 500) {
+            console.log(this.cluckCounter);
+            ASSET_MANAGER.getAsset("./cluck.mp3").muted = false;
+            ASSET_MANAGER.getAsset("./cluck.mp3").play();
+        } else if (this.cluckCounter == 538) {
+            this.cluckCounter = 0;
+            ASSET_MANAGER.getAsset("./cluck.mp3").pause();
+            // ASSET_MANAGER.getAsset("./cluck.mp3").currentTime = 0;
+        }
         if (this.x >= -200 && this.x <= -150) {
             this.walking = 0;
         }
@@ -31,6 +35,7 @@ class Chicken {
 
         this.walking == 0 ? this.x += this.speed * this.game.clockTick : 
                             this.x -= this.speed * this.game.clockTick;
+        this.cluckCounter++;
         
     };
     
