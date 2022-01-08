@@ -4,8 +4,8 @@ class Steve {
 
         // walking
         this.animations = [];
-        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 25, 103, 23, 17, 4, 0.3, 8);
-        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 25, 121, 23, 18, 4, 0.3, 8);
+        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./human_spritesheet.png"), 25, 103, 23, 17, 4, 0.3, 8);
+        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./human_spritesheet.png"), 25, 121, 23, 18, 4, 0.3, 8);
         
         // 0 is right, 1 is left
         this.walking = 0;

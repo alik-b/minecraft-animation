@@ -4,8 +4,8 @@ class Villager {
 
         // walking
         this.animations = [];
-        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 29, 143, 12, 15, 4, 0.4, 8);
-        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./steve_spritesheet.png"), 29, 159, 12, 15, 4, 0.4, 8);
+        this.animations[0] = new Animator(ASSET_MANAGER.getAsset("./human_spritesheet.png"), 29, 143, 12, 15, 4, 0.4, 8);
+        this.animations[1] = new Animator(ASSET_MANAGER.getAsset("./human_spritesheet.png"), 29, 159, 12, 15, 4, 0.4, 8);
         
         // 0 is right, 1 is left
         this.walking = 0;
@@ -17,14 +17,14 @@ class Villager {
     };
 
     update() {
-        // if (this.huhCounter == 200) {
-        //     console.log(this.huhCounter);
-        //     ASSET_MANAGER.getAsset("./huh.mp3").muted = false;
-        //     ASSET_MANAGER.getAsset("./huh.mp3").play();
-        // } else if (this.huhCounter == 238) {
-        //     this.huhCounter = 0;
-        //     ASSET_MANAGER.getAsset("./huh.mp3").pause();
-        // }
+        if (this.huhCounter == 200) {
+            console.log(this.huhCounter);
+            ASSET_MANAGER.getAsset("./huh.mp3").muted = false;
+            ASSET_MANAGER.getAsset("./huh.mp3").play();
+        } else if (this.huhCounter == 238) {
+            this.huhCounter = 0;
+            ASSET_MANAGER.getAsset("./huh.mp3").pause();
+        }
 
         if (this.x >= -425 && this.x <= -375) {
             this.walking = 0;
@@ -35,7 +35,7 @@ class Villager {
 
         this.walking == 0 ? this.x += this.speed * this.game.clockTick : 
                             this.x -= this.speed * this.game.clockTick;
-        // this.huhCounter++;
+        this.huhCounter++;
         
     };
     
