@@ -100,6 +100,7 @@ class GameEngine {
         this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
 
         this.ctx.drawImage(ASSET_MANAGER.getAsset("./background.gif"), 0, 0, 1650, 1200);
+        this.ctx.drawImage(ASSET_MANAGER.getAsset("./beehive.png"), 1143, 750);
 
         // Draw latest things first
         for (let i = this.entities.length - 1; i >= 0; i--) {
