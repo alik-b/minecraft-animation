@@ -101,6 +101,10 @@ class GameEngine {
 
         this.ctx.drawImage(ASSET_MANAGER.getAsset("./background.gif"), 0, 0, 1650, 1200);
         this.ctx.drawImage(ASSET_MANAGER.getAsset("./beehive.png"), 1143, 750);
+        this.ctx.drawImage(ASSET_MANAGER.getAsset("./flower_spritesheet.png"), 0, 0, 6, 8, 800, 923, 6*4, 8*4);
+        this.ctx.drawImage(ASSET_MANAGER.getAsset("./flower_spritesheet.png"), 10, 0, 7, 11, 1400, 914, 7*4, 11*4);
+        this.ctx.drawImage(ASSET_MANAGER.getAsset("./flower_spritesheet.png"), 18, 0, 13, 14, 600, 905, 13*4, 14*4);
+        this.ctx.drawImage(ASSET_MANAGER.getAsset("./flower_spritesheet.png"), 33, 0, 6, 14, 100, 905, 6*4, 14*4);
 
         // Draw latest things first
         for (let i = this.entities.length - 1; i >= 0; i--) {
