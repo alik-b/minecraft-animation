@@ -26,9 +26,10 @@ ASSET_MANAGER.downloadAll(() => {
 
 	document.body.addEventListener("mousemove", function () {
 		ASSET_MANAGER.getAsset("./minecraft.mp3").muted = false;
+		ASSET_MANAGER.getAsset("./minecraft.mp3").volume = 0.6;
 		ASSET_MANAGER.getAsset("./minecraft.mp3").play();
 		ASSET_MANAGER.getAsset("./buzz.mp3").muted = false;
-		ASSET_MANAGER.getAsset("./buzz.mp3").volume = 0.2;
+		ASSET_MANAGER.getAsset("./buzz.mp3").volume = 0.1;
         ASSET_MANAGER.getAsset("./buzz.mp3").play();
 	});
 
